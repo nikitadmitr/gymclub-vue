@@ -1,0 +1,20 @@
+$primary-color: #0f0f0f;
+$secondary-color: #fb5b02;
+$tertiary-color: #2d2d2d;
+$black: #000000;
+$white: #ffffff;
+$gray: lighten($black, 30%);
+
+$mobile-nav-overlay-depth: 100;
+$mobile-nav-depth: 200;
+$modal-overlay-depth: 300;
+$modal-depth: 400;
+$slider-depth: 10;
+$popover-depth: 50;
+
+$xsmall-screen: 360px;
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 1024px;
+$xlarge-screen: 1440px;
+$xxlarge-screen: 1920px;

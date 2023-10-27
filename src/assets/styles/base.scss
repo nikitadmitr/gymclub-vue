@@ -1,0 +1,38 @@
+// Reset
+@import 'reset';
+
+// Main styles
+@import 'mixins';
+@import 'vars';
+@import 'main';
+
+// Components
+@import 'components/layout';
+@import 'components/buttons';
+@import 'components/modal';
+@import 'components/images';
+@import 'components/typography';
+@import 'components/popover';
+@import 'components/loader';
+@import 'components/form';
+@import 'components/cards';
+
+// Blocks
+@import 'blocks/header';
+@import 'blocks/nav';
+@import 'blocks/mobile-nav';
+@import 'blocks/auth-modal';
+@import 'blocks/tariffs';
+@import 'blocks/footer';
+@import 'blocks/main-slider';
+@import 'blocks/reviews-slider';
+@import 'blocks/hero-preview';
+@import 'blocks/yandex-map';
+@import 'blocks/index-circle';
+@import 'blocks/workout-card';
+
+// Pages
+@import 'pages/home.scss';
+@import 'pages/about-us';
+@import 'pages/how-we-work';
+@import 'pages/error404';

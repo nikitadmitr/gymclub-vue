@@ -1,0 +1,128 @@
+.about-us-main-info {
+    text-align: center;
+}
+
+.about-us-main-info__common-info {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.about-us-main-info__common-info-text {
+    margin-top: 3rem;
+}
+
+.about-us-main-info__image {
+    margin-top: 10rem;
+}
+
+.about-us-main-info__additional-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6rem;
+    row-gap: 6rem;
+
+    text-align: left;
+}
+
+.about-us-main-info__additional-info-column {
+    max-width: 45%;
+}
+
+.about-us-main-info__additional-info-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.about-us-main-info__additional-info-list-item {
+    position: relative;
+
+    p {
+        text-indent: 3rem;
+    }
+
+    ::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2rem;
+        height: 2.4rem;
+
+        content: '';
+
+        background-image: url('@/assets/icons/check-mark.svg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.about-us-creators {
+    text-align: center;
+}
+
+.about-us-contact__row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 5rem;
+    row-gap: 10rem;
+}
+
+.about-us-contact__title {
+    margin-bottom: 3rem;
+}
+
+.about-us-contact__info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10rem;
+}
+
+.about-us-contact__info-row__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+
+    @include normal-font;
+    font-size: 1.8rem;
+}
+
+.about-us-contact__form {
+    max-width: 60%;
+}
+
+.about-us-contact__form-textarea {
+    height: 20rem;
+}
+
+@media (max-width: $large-screen) {
+    .about-us-contact__row {
+        flex-direction: column-reverse;
+    }
+
+    .about-us-contact__form {
+        max-width: 100%;
+    }
+
+    .about-us-contact__info {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: $medium-screen) {
+    .about-us-main-info__additional-info {
+        flex-direction: column;
+    }
+
+    .about-us-main-info__additional-info-column {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: $small-screen) {
+    .about-us-contact__info {
+        flex-direction: column;
+    }
+}

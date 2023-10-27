@@ -1,0 +1,25 @@
+.home-hero {
+    margin: 0;
+}
+
+.home-tariffs {
+    text-align: center;
+}
+
+.home-concact-us {
+    text-align: center;
+}
+
+.home-contact-us__form {
+    text-align: left;
+}
+
+.home-concact-us__textarea {
+    height: 40rem;
+}
+
+@media (max-width: $small-screen) {
+    .home-welcome {
+        background-color: $tertiary-color;
+    }
+}

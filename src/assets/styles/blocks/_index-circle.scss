@@ -1,0 +1,39 @@
+$index-circle-depth: 5;
+
+.index-circle {
+    position: relative;
+    width: 10rem;
+    height: 10rem;
+}
+
+.index-circle__circle {
+    position: absolute;
+    z-index: $index-circle-depth;
+    width: 100%;
+    height: 100%;
+
+    border: 0.4rem solid $secondary-color;
+    border-radius: 50%;
+}
+
+.index-circle__overlay {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+
+    background-color: $primary-color;
+}
+
+.index-circle__text {
+    position: absolute;
+    z-index: $index-circle-depth + 5;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include subtitle-font;
+    text-align: center;
+    font-size: 4.3rem;
+}

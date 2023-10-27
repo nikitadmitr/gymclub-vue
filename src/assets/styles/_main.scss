@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,700&family=Montserrat:wght@500;600;700&family=Roboto&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    @include normal-font;
+    font-size: 1.4rem;
+
+    background-color: $primary-color;
+    color: $white;
+}
+
+.router-transition-enter-active,
+.router-transition-leave-active {
+    transition: opacity 0.2s ease-in-out;
+}
+
+.router-transition-enter-from,
+.router-transition-leave-to {
+    opacity: 0;
+}
+
+@media (max-width: $large-screen) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@media (max-width: $medium-screen) {
+    html {
+        font-size: 6px;
+    }
+}

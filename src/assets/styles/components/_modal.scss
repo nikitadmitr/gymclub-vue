@@ -1,0 +1,86 @@
+.modal__block {
+    position: fixed;
+    left: 50%;
+    top: 48%;
+    width: 75%;
+    z-index: $modal-depth;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+    background-color: $primary-color;
+    border-radius: 5px;
+
+    color: $white;
+
+    overflow: hidden;
+    visibility: hidden;
+
+    transition: all 0.3s ease-out;
+}
+
+.modal__block--visible {
+    top: 50%;
+
+    opacity: 1;
+
+    visibility: visible;
+}
+
+.modal__open-button {
+    display: inline-block;
+}
+
+.modal__container {
+    padding: 0 7rem;
+}
+
+.modal__header {
+    width: 100%;
+}
+
+.base-modal__heading {
+    margin-top: 5rem;
+}
+
+.modal__content {
+    padding: 4rem 0;
+}
+
+.modal__close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    cursor: pointer;
+}
+
+.modal__overlay {
+    position: fixed;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $modal-overlay-depth;
+
+    background-color: rgba(darken($white, 80%), 0.4);
+    opacity: 0;
+
+    visibility: hidden;
+    pointer-events: none;
+    cursor: pointer;
+
+    transition: all 1s ease-out;
+}
+
+.modal__overlay--visible {
+    visibility: visible;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .modal__block {
+        width: 90%;
+    }
+}

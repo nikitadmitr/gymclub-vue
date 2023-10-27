@@ -1,0 +1,67 @@
+.auth-modal {
+    position: absolute;
+}
+
+.auth-modal__buttons {
+    display: flex;
+}
+
+.auth-modal__button {
+    width: 50%;
+    display: block;
+    padding: 20px 0;
+
+    font-size: 1.2em;
+    text-align: center;
+
+    @include title-font;
+    color: $white;
+    font-size: 2rem;
+    background-color: $tertiary-color;
+
+    transition: background-color 0.3s ease-out;
+
+    cursor: pointer;
+}
+
+.auth-modal__button--active {
+    background-color: transparent;
+}
+
+.auth-modal__content {
+    position: relative;
+    width: 100%;
+
+    overflow: hidden;
+
+    transition: height 0.3s ease-out;
+}
+
+.auth-modal__form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    transition: all 0.3s ease-out;
+}
+
+.auth-modal__sign-up-form {
+    opacity: 0;
+    transform: translateX(100%);
+}
+
+.auth-modal__sign-up-form--active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.auth-modal__sign-in-form {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.auth-modal__sign-in-form--active {
+    opacity: 1;
+    transform: translateX(0);
+}

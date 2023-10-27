@@ -1,0 +1,24 @@
+.loader {
+    text-align: center;
+}
+
+.loader__donut {
+    width: 8rem;
+    height: 8rem;
+    display: inline-block;
+
+    border: 0.6rem solid transparent;
+    border-left-color: $white;
+    border-radius: 50%;
+
+    animation: donut-spin 1.3s linear infinite;
+}
+
+@keyframes donut-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

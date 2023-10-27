@@ -1,0 +1,45 @@
+// checked
+@mixin button-style {
+    cursor: pointer;
+}
+
+@mixin nav-link-style($text-color, $transition-time, $hover-color) {
+    @include link-font;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+
+    color: $text-color;
+
+    transition: $transition-time color ease-out;
+
+    &:hover {
+        color: $hover-color;
+    }
+}
+
+@mixin title-font {
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+@mixin subtitle-font {
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+@mixin normal-font {
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+@mixin link-font {
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+@mixin accent-font {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-style: italic;
+}

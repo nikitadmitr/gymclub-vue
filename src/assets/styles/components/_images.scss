@@ -1,0 +1,91 @@
+@mixin base-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 1;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &__content {
+        position: absolute;
+        left: 50%;
+        z-index: $slider-depth + 5;
+        height: 100%;
+        transform: translateX(-50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        background-color: $white;
+
+        img {
+            width: 100%;
+            height: 100%;
+            min-height: 25rem;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__overlay {
+        &-subtle-darken {
+            @include base-overlay;
+
+            background: linear-gradient(
+                0deg,
+                rgba(15, 15, 15, 0.2) 0%,
+                rgba(15, 15, 15, 0.2) 100%
+            );
+        }
+
+        &-intense-darken {
+            @include base-overlay;
+
+            background: linear-gradient(
+                0deg,
+                rgba(15, 15, 15, 0.8) 0%,
+                rgba(15, 15, 15, 0.8) 100%
+            );
+        }
+
+        &-gradient-darken {
+            @include base-overlay;
+
+            background: linear-gradient(
+                    0deg,
+                    rgba($primary-color, 0%),
+                    rgba($primary-color, 100%)
+                ),
+                linear-gradient(
+                    180deg,
+                    #0f0f0f 0%,
+                    rgba(0, 0, 0, 0) 12.81%,
+                    rgba(0, 0, 0, 0) 81.56%,
+                    #0f0f0f 100%
+                );
+        }
+
+        &-color-tint-darken {
+            @include base-overlay;
+
+            background: linear-gradient(
+                    0deg,
+                    rgba(251, 91, 2, 0.1) 0%,
+                    rgba(251, 91, 2, 0.1) 100%
+                ),
+                rgba(15, 15, 15, 0.3);
+        }
+    }
+}

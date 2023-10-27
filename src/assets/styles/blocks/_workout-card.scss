@@ -1,0 +1,25 @@
+.workout-card__additional-info {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+    margin-top: 3rem;
+
+    @include accent-font;
+    font-style: italic;
+    font-size: 2rem;
+
+    color: $secondary-color;
+}
+
+.workout-card__additional-info-column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+@media (max-width: $small-screen) {
+    .workout-card__additional-info {
+        text-align: left;
+        padding: 0 5rem;
+    }
+}

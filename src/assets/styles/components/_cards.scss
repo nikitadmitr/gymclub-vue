@@ -1,0 +1,254 @@
+// Main card styles
+.img-cards-block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 7rem;
+}
+
+.img-card {
+    display: flex;
+    width: 100%;
+    row-gap: 5rem;
+}
+
+.img-card--reverse {
+    flex-direction: row-reverse;
+
+    .img-card__content-wrapper {
+        justify-content: flex-end;
+    }
+}
+
+.img-card__content-wrapper {
+    display: flex;
+    flex: 1.5;
+    align-items: center;
+}
+
+.img-card__content {
+    max-width: 85%;
+
+    text-align: left;
+}
+
+.img-card__button {
+    margin-top: 4rem;
+}
+
+.img-card__image {
+    flex: 1;
+}
+
+// Common User Card styles
+.user-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 5rem;
+    row-gap: 5rem;
+}
+
+.user-card {
+    width: 40rem;
+    height: 60rem;
+
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user-card__content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: $slider-depth + 5;
+    padding: 1rem 1.5rem;
+    transform: translateY(-100%);
+
+    text-align: left;
+
+    background-color: $secondary-color;
+
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.user-card__name {
+    @include subtitle-font;
+    font-style: italic;
+    font-size: 2.8rem;
+}
+
+.user-card__title {
+    @include subtitle-font;
+    font-style: italic;
+    font-size: 1.6rem;
+}
+
+// User Card Link styles (to profile)
+.user-card-link {
+    color: inherit;
+}
+
+.user-card-link__content {
+    height: 14%;
+}
+
+.user-card-link__description {
+    margin-top: 1rem;
+
+    @include normal-font;
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease-out;
+}
+
+.user-card-link:hover {
+    .user-card-link__description {
+        opacity: 1;
+    }
+
+    .user-card-link__content {
+        height: 25%;
+    }
+}
+
+// User Card with Social Networks styles (not link)
+.user-card__social-networks {
+    position: absolute;
+    top: 2rem;
+    left: -6rem;
+    z-index: $slider-depth + 10;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    transition: left 0.5s ease;
+}
+
+.user-card__social-network-link {
+    padding: 1rem;
+
+    background: $white;
+
+    svg {
+        width: 4rem;
+        height: 4rem;
+
+        fill: $gray;
+    }
+}
+
+.user-card-social-networks:hover .user-card__social-networks {
+    left: 1rem;
+}
+
+// Profile Card styles
+.profile-card {
+    flex-direction: row-reverse;
+    column-gap: 7rem;
+
+    .image-container__image {
+        max-height: 70rem;
+    }
+
+    .img-card__content-wrapper {
+        align-items: flex-start;
+    }
+
+    .img-card__content {
+        max-width: 100%;
+    }
+}
+
+.profile-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 2rem;
+}
+
+.profile-card__socials {
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.profile-card__socials-button {
+    width: 3rem;
+    height: 3rem;
+}
+
+.profile-card__name {
+    @include subtitle-font;
+    font-style: italic;
+    font-size: 3rem;
+}
+
+.profile-card__title {
+    margin-top: 0.5rem;
+
+    @include subtitle-font;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+.profile-card__description {
+    margin-top: 3rem;
+    @include normal-font;
+    font-size: 1.8rem;
+}
+
+.profile-card__buttons {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+.profile-card__edit-button {
+    flex-basis: 100%;
+}
+
+.profile-card__upload {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 100%;
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+@media (max-width: $medium-screen) {
+    .user-cards {
+        justify-content: center;
+    }
+}
+
+@media (max-width: $small-screen) {
+    .img-card {
+        flex-direction: column-reverse !important;
+    }
+
+    .img-card__content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .profile-card {
+        .img-card__content-wrapper {
+            justify-content: center;
+        }
+    }
+
+    .profile-card__header {
+        flex-direction: column;
+    }
+
+    .profile-card__upload {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
