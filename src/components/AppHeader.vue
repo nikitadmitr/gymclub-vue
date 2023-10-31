@@ -24,7 +24,6 @@
                     </nav>
                     <div class="header__actions">
                         <template v-if="!loggedIn">
-                            <AuthModal :isModalOpened="isModalAuthOpened" @update:isModalOpened="closeAuthModal" />
                             <button class="icon-button" @click="openAuthModal">
                                 <AuthIcon />
                             </button>
@@ -58,6 +57,7 @@
                             </div>
                         </template>
                     </div>
+                    <AuthModal v-if="!loggedIn" :isModalOpened="isModalAuthOpened" @update:isModalOpened="closeAuthModal" />
                     <MobileNav @openAuthModal="openAuthModal" />
                 </div>
             </div>
